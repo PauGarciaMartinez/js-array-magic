@@ -1,0 +1,146 @@
+// GLOBAL SETTINGS
+
+html, 
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  background-color: rgb(240, 221, 197);
+}
+
+// LAYOUT SETTINGS
+
+.wrapper {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1.5fr 0.5fr 0.5fr 0.7fr 0.5fr 0.5fr 0.5fr 0.7fr auto;
+  grid-template-areas: 
+  "header header header"
+  "sub-header sub-header sub-header"
+  "name name name"
+  "button1 button2 button3"
+  "join join join"
+  "button4 button4 button4"
+  "find-mail find-mail find-mail"
+  "button5 button5 button5"
+  "display display display"
+  ;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+// HEADER
+
+.header {
+  grid-area: header;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 5rem;
+  color: rgb(207, 140, 63);
+}
+
+.sub-header {
+  grid-area: sub-header;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: rgb(104, 68, 28);
+}
+
+// BUTTONS
+
+button {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: rgb(233, 182, 125);
+  color:rgb(59, 39, 15);
+}
+
+button:hover {
+    background-color: rgb(211, 145, 58);
+    color: white;
+    cursor: pointer;
+    font-size: 1.05rem;
+    transform: scale(1.05, 1.05);
+}
+
+#exercise1 {
+  grid-area: button1;
+}
+#exercise2 {
+  grid-area: button2;
+}
+#exercise3 {
+  grid-area: button3;
+}
+#exercise4 {
+  grid-area: button4;
+}
+#exercise5 {
+  grid-area: button5;
+}
+
+// INPUT TEXT
+
+#name,
+#name2,
+#middle-name,
+#text-bulk {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+#name  {
+  grid-area: name;
+}
+
+#name2  {
+  grid-area: name2;
+}
+
+#middle-name {
+  grid-area: middle-name;
+}
+
+#text-bulk {
+  grid-area: find-mail;
+}
+
+// JOIN CONTAINER
+
+.join-container {
+  grid-area: join;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "name2 middle-name";
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+  height: 100%;
+  width: 100%;
+}
+
+// DISPLAY CONTAINER
+
+.display-container {
+  grid-area: display;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 100%;
+}
